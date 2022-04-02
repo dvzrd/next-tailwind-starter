@@ -1,0 +1,225 @@
+:root {
+  /* default colors */
+  --color-black: #000;
+  --color-white: #fff;
+
+  /* default gray colors */
+  --color-gray-25: #fafafa;
+  --color-gray-50: #e5e5e5;
+  --color-gray-75: #d6d6d6;
+  --color-gray-100: #c4c4c4;
+  --color-gray-200: #b8b8b8;
+  --color-gray-300: #a7a7a7;
+  --color-gray-400: #949494;
+  --color-gray-500: #808080;
+  --color-gray-600: #5e5e5e;
+  --color-gray-700: #444444;
+  --color-gray-800: #272727;
+  --color-gray-900: #131313;
+
+  /* default amber colors */
+  --color-amber-100: #ffcb76;
+  --color-amber-200: #fdc262;
+  --color-amber-300: #ffbc50;
+  --color-amber-400: #ffaf2e;
+  --color-amber-500: #fca311;
+  --color-amber-600: #f59700;
+  --color-amber-700: #dd8800;
+  --color-amber-800: #d38200;
+  --color-amber-900: #c27800;
+
+  /* default sky colors */
+  --color-sky-100: #004cf1;
+  --color-sky-200: #0246d8;
+  --color-sky-300: #033bb4;
+  --color-sky-400: #043399;
+  --color-sky-500: #073088;
+  --color-sky-600: #11337e;
+  --color-sky-700: #13306e;
+  --color-sky-800: #17284e;
+  --color-sky-900: #14213d;
+
+  /* default service colors */
+  --color-service-fail: #ff0055;
+  --color-service-info: #00fcef;
+  --color-service-pass: #33ff00;
+  --color-service-warn: #ff5100;
+}
+
+.dark {
+  /* dark background colors */
+  --color-bg: var(--color-black);
+  --color-bg-accent: var(--color-sky-800);
+  --color-bg-action: var(--color-gray-700);
+  --color-bg-action-accent: var(--color-gray-800);
+  --color-bg-contrast: var(--color-gray-100);
+  --color-bg-contrast-accent: var(--color-gray-300);
+  --color-bg-paper: var(--color-gray-800);
+  --color-bg-paper-accent: var(--color-gray-900);
+  /* dark border colors */
+  --color-border: var(--color-gray-700);
+  --color-border-accent: var(--color-sky-600);
+  --color-border-action: var(--color-gray-700);
+  --color-border-action-accent: var(--color-gray-800);
+  --color-border-contrast: var(--color-gray-200);
+  --color-border-contrast-accent: var(--color-gray-400);
+  --color-border-paper: var(--color-gray-700);
+  --color-border-paper-accent: var(--color-gray-800);
+  /* dark text colors */
+  --color-text: var(--color-white);
+  --color-text-accent: var(--color-amber-700);
+  --color-text-action: var(--color-white);
+  --color-text-action-accent: var(--color-gray-25);
+  --color-text-contrast: var(--color-black);
+  --color-text-contrast-accent: var(--color-gray-900);
+  --color-text-paper: var(--color-gray-25);
+  --color-text-paper-accent: var(--color-white);
+
+  /* dark primary background colors */
+  --color-bg-primary: var(--color-sky-800);
+  --color-bg-primary-accent: var(--color-sky-700);
+  --color-bg-primary-action: var(--color-sky-500);
+  --color-bg-primary-action-accent: var(--color-sky-600);
+  --color-bg-primary-contrast: var(--color-amber-500);
+  --color-bg-primary-contrast-accent: var(--color-amber-600);
+  --color-bg-primary-paper: var(--color-sky-600);
+  --color-bg-primary-paper-accent: var(--color-sky-700);
+  /* dark primary border colors */
+  --color-border-primary: var(--color-sky-800);
+  --color-border-primary-accent: var(--color-sky-700);
+  --color-border-primary-action: var(--color-sky-500);
+  --color-border-primary-action-accent: var(--color-sky-600);
+  --color-border-primary-contrast: var(--color-gray-600);
+  --color-border-primary-contrast-accent: var(--color-gray-700);
+  --color-border-primary-paper: var(--color-gray-300);
+  --color-border-primary-paper-accent: var(--color-gray-400);
+   /* dark primary text colors */
+  --color-text-primary: var(--color-gray-50);
+  --color-text-primary-accent: var(--color-gray-75);
+  --color-text-primary-action: var(--color-white);
+  --color-text-primary-action-accent: var(--color-gray-25);
+  --color-text-primary-contrast: var(--color-white);
+  --color-text-primary-contrast-accent: var(--color-gray-75);
+  --color-text-primary-paper: var(--color-white);
+  --color-text-primary-paper-accent: var(--color-gray-50);
+
+  /* dark secondary background colors */
+  --color-bg-secondary: var(--color-amber-500);
+  --color-bg-secondary-accent: var(--color-amber-600);
+  --color-bg-secondary-action: var(--color-amber-800);
+  --color-bg-secondary-action-accent: var(--color-amber-900);
+  --color-bg-secondary-contrast: var(--color-sky-800);
+  --color-bg-secondary-contrast-accent: var(--color-sky-900);
+  --color-bg-secondary-paper: var(--color-amber-400);
+  --color-bg-secondary-paper-accent: var(--color-amber-600);
+  /* dark secondary border colors */
+  --color-border-secondary: var(--color-amber-500);
+  --color-border-secondary-accent: var(--color-amber-600);
+  --color-border-secondary-action: var(--color-amber-800);
+  --color-border-secondary-action-accent: var(--color-amber-900);
+  --color-border-secondary-contrast: var(--color-sky-700);
+  --color-border-secondary-contrast-accent: var(--color-sky-800);
+  --color-border-secondary-paper: var(--color-gray-900);
+  --color-border-secondary-paper-accent: var(--color-gray-800);
+  /* dark secondary text colors */
+  --color-text-secondary: var(--color-black);
+  --color-text-secondary-accent: var(--color-gray-900);
+  --color-text-secondary-action: var(--color-black);
+  --color-text-secondary-action-accent: var(--color-gray-900);
+  --color-text-secondary-contrast: var(--color-gray-50);
+  --color-text-secondary-contrast-accent: var(--color-gray-75);
+  --color-text-secondary-paper: var(--color-gray-900);
+  --color-text-secondary-paper-accent: var(--color-black);
+
+  /* dark theme background gradients */
+  --color-bg-gradient: linear-gradient(0deg, rgba(6,8,48,1) 0%, rgba(6,8,48,0.98) 15%, rgba(6,8,48,0.96) 30%, rgba(6,8,48,0.94) 40%, rgba(6,8,48,0.92) 50%, rgba(6,8,48,0.94) 60%, rgba(6,8,48,0.96) 70%, rgba(6,8,48,0.98) 85%, rgba(6,8,48,1) 100%);
+}
+
+.light {
+  /* light background colors */
+  --color-bg: var(--color-white);
+  --color-bg-accent: var(--color-gray-50);
+  --color-bg-action: var(--color-gray-100);
+  --color-bg-action-accent: var(--color-gray-200);
+  --color-bg-contrast: var(--color-gray-600);
+  --color-bg-contrast-accent: var(--color-gray-700);
+  --color-bg-paper: var(--color-gray-50);
+  --color-bg-paper-accent: var(--color-gray-100);
+  /* light border colors */
+  --color-border: var(--color-gray-75);
+  --color-border-accent: var(--color-gray-100);
+  --color-border-action: var(--color-gray-100);
+  --color-border-action-accent: var(--color-gray-200);
+  --color-border-contrast: var(--color-gray-800);
+  --color-border-contrast-accent: var(--color-gray-900);
+  --color-border-paper: var(--color-gray-100);
+  --color-border-paper-accent: var(--color-gray-200);
+  /* light text colors */
+  --color-text: var(--color-black);
+  --color-text-accent: var(--color-gray-amber-500);
+  --color-text-action: var(--color-black);
+  --color-text-action-accent: var(--color-gray-900);
+  --color-text-contrast: var(--color-gray-25);
+  --color-text-contrast-accent: var(--color-gray-50);
+  --color-text-paper: var(--color-gray-900);
+  --color-text-paper-accent: var(--color-gray-800);
+
+  /* light primary background colors */
+  --color-bg-primary: var(--color-amber-500);
+  --color-bg-primary-accent: var(--color-amber-600);
+  --color-bg-primary-action: var(--color-amber-300);
+  --color-bg-primary-action-accent: var(--color-amber-400);
+  --color-bg-primary-contrast: var(--color-sky-800);
+  --color-bg-primary-contrast-accent: var(--color-sky-900);
+  --color-bg-primary-paper: var(--color-amber-400);
+  --color-bg-primary-paper-accent: var(--color-amber-600);
+  /* light primary border colors */
+  --color-border-primary: var(--color-gray-800);
+  --color-border-primary-accent: var(--color-gray-900);
+  --color-border-primary-action: var(--color-amber-300);
+  --color-border-primary-action-accent: var(--color-amber-400);
+  --color-border-primary-contrast: var(--color-sky-600);
+  --color-border-primary-contrast-accent: var(--color-sky-700);
+  --color-border-primary-paper: var(--color-gray-400);
+  --color-border-primary-paper-accent: var(--color-gray-600);
+  /* light primary text colors */
+  --color-text-primary: var(--color-black);
+  --color-text-primary-accent: var(--color-gray-900);
+  --color-text-primary-action: var(--color-gray-900);
+  --color-text-primary-action-accent: var(--color-gray-800);
+  --color-text-primary-contrast: var(--color-gray-50);
+  --color-text-primary-contrast-accent: var(--color-gray-75);
+  --color-text-primary-paper: var(--color-gray-800);
+  --color-text-primary-paper-accent: var(--color-gray-900);
+
+  /* light secondary background colors */
+  --color-bg-secondary: var(--color-sky-800);
+  --color-bg-secondary-accent: var(--color-sky-900);
+  --color-bg-secondary-action: var(--color-sky-100);
+  --color-bg-secondary-action-accent: var(--color-sky-200);
+  --color-bg-secondary-contrast: var(--color-amber-500);
+  --color-bg-secondary-contrast-accent: var(--color-amber-600);
+  --color-bg-secondary-paper: var(--color-sky-700);
+  --color-bg-secondary-paper-accent: var(--color-sky-900);
+  /* light secondary border colors */
+  --color-border-secondary: var(--color-gray-400);
+  --color-border-secondary-accent: var(--color-gray-500);
+  --color-border-secondary-action: var(--color-sky-100);
+  --color-border-secondary-action-accent: var(--color-sky-200);
+  --color-border-secondary-contrast: var(--color-gray-800);
+  --color-border-secondary-contrast-accent: var(--color-gray-900);
+  --color-border-secondary-paper: var(--color-gray-100);
+  --color-border-secondary-paper-accent: var(--color-gray-200);
+  /* light secondary text colors */
+  --color-text-secondary: var(--color-white);
+  --color-text-secondary-accent: var(--color-gray-25);
+  --color-text-secondary-action: var(--color-white);
+  --color-text-secondary-action-accent: var(--color-gray-25);
+  --color-text-secondary-contrast: var(--color-gray-800);
+  --color-text-secondary-contrast-accent: var(--color-gray-900);
+  --color-text-secondary-paper: var(--color-white);
+  --color-text-secondary-paper-accent: var(--color-gray-25);
+
+  /* light theme background gradients */
+  --color-bg-gradient: linear-gradient(0deg, rgba(242,242,248,1) 0%, rgba(242,242,248,0.98) 15%, rgba(242,242,248,0.96) 30%, rgba(242,242,248,0.94) 40%, rgba(242,242,248,0.92) 50%, rgba(242,242,248,0.94) 60%, rgba(242,242,248,0.96) 70%, rgba(242,242,248,0.98) 85%, rgba(242,242,248,1) 100%);
+}

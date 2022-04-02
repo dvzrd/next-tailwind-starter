@@ -1,0 +1,41 @@
+// contact form styles
+
+.contactForm {
+  @apply mt-8 md:mt-12 xl:mt-16;
+}
+
+.contactFormFields {
+  @apply relative grid gap-4;
+  @apply mt-4 mb-8 md:mb-10 xl:mb-12;
+}
+
+.contactFormMessage {
+  @apply -mt-6;
+  @apply py-2 px-4;
+  @apply bg-primary text-primary;
+  @apply text-center self-center;
+}
+
+.contactFormRecaptcha {
+  @apply rounded overflow-hidden;
+  @apply absolute w-17;
+  @apply -bottom-22 right-0;
+  @apply transition-all duration-150 ease-in;
+
+  @media only screen and (min-width: 768px) {
+    bottom: -6.05rem;
+  }
+
+  @media only screen and (min-width: 1280px) {
+    bottom: -6.95rem;
+  }
+
+  &:hover,
+  &:focus {
+    @apply w-auto;
+  }
+
+  > div > div {
+    @apply relative right-auto bottom-auto #{!important};
+  }
+}

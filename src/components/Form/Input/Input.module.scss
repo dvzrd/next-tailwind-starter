@@ -1,0 +1,14 @@
+.textInput {
+  @apply
+    p-2
+    md:p-3
+    xl:p-4
+    border-3
+    border-default
+    hover:border-accent
+    focus:border-accent
+    focus:outline-none
+    text-default
+    transition-colors
+    duration-150 ease-in-out;
+}

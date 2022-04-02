@@ -1,0 +1,136 @@
+// default button
+
+.defaultButton {
+  @apply
+    inline-flex
+    items-center
+    outline-none
+    focus:outline-none
+    font-heading;
+}
+
+// button patterns
+
+.containedButton {
+  @apply
+    border-solid
+    border-action
+    hover:border-action-accent
+    focus:border-action-accent
+    bg-action
+    hover:bg-action-accent
+    focus:bg-action-accent
+    text-action
+    hover:text-action-accent
+    focus:text-action-accent
+    font-bold
+    tracking-wide
+    uppercase;
+
+  &.primaryButton {
+    @apply
+      border-primary-action
+      hover:border-primary-action-accent
+      focus:border-primary-action-accent
+      bg-primary-action
+      hover:bg-primary-action-accent
+      focus:bg-primary-action-accent
+      text-primary-action
+      hover:text-primary-action-accent
+      focus:text-primary-action-accent;
+  }
+
+  &.secondaryButton {
+    @apply
+      border-secondary-action
+      hover:border-secondary-action-accent
+      focus:border-secondary-action-accent
+      bg-secondary-action
+      hover:bg-secondary-action-accent
+      focus:bg-secondary-action-accent
+      text-secondary-action
+      hover:text-secondary-action-accent
+      focus:text-secondary-action-accent;
+  }
+}
+
+.outlinedButton {
+  @apply
+    bg-transparent #{!important};
+  @apply
+    border-action
+    hover:border-action-accent
+    focus:border-action-accent
+    text-action
+    hover:text-action-accent
+    focus:text-action-accent;
+
+  &.primaryButton {
+    @apply
+      border-primary-action
+      hover:border-primary-action-accent
+      focus:border-primary-action-accent
+      text-primary-action
+      hover:text-primary-action-accent
+      focus:text-primary-action-accent;
+  }
+
+  &.secondaryButton {
+    @apply
+      border-secondary-action
+      hover:border-secondary-action-accent
+      focus:border-secondary-action-accent
+      text-secondary-action
+      hover:text-secondary-action-accent
+      focus:text-secondary-action-accent;
+  }
+}
+
+.iconButton {
+  @apply
+    border-none
+    p-0;
+}
+
+.textButton {
+  @apply
+    border-none
+    bg-transparent
+    p-0
+    text-default
+    hover:text-accent
+    focus:text-accent
+    text-left
+    leading-normal
+    normal-case
+    font-body;
+
+  &.primaryButton {
+    @apply
+      text-primary
+      hover:text-primary-accent
+      focus:text-primary-accent;
+  }
+
+  &.secondaryButton {
+    @apply
+      text-secondary
+      hover:text-secondary-accent
+      focus:text-secondary-accent;
+  }
+}
+
+// button modifiers
+
+.inheritButton {
+  @apply
+    bg-inherit
+    border-inherit
+    text-inherit #{!important};
+}
+
+.transparentButton {
+  @apply
+    bg-transparent
+    border-transparent #{!important};
+}

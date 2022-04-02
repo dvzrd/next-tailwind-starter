@@ -1,0 +1,15 @@
+.brand {
+  @apply
+    relative
+    gap-1
+    md:gap-2
+    xl:gap-3
+    flex
+    flex-none
+    content-center
+    items-center
+    no-underline
+    focus:no-underline
+    hover:no-underline
+    z-10;
+}
