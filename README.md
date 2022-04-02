@@ -1,6 +1,6 @@
 # Next Tailwind Starter
 
-This starter is based off [Next-js-Boilerplate])(https://github.com/ixartz/Next-js-Boilerplate) [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40Ixartz)](https://twitter.com/ixartz)
+This starter is based off [Next-js-Boilerplate](https://github.com/ixartz/Next-js-Boilerplate) [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40Ixartz)](https://twitter.com/ixartz)
 
 Things that were added:
 - layouts
