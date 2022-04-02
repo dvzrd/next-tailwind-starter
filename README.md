@@ -1,6 +1,6 @@
 # Next Tailwind Starter
 
-This starter is based off [Next-js-Boilerplate](https://github.com/ixartz/Next-js-Boilerplate) [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40Ixartz)](https://twitter.com/ixartz)
+This starter is based off [Next-js-Boilerplate](https://github.com/ixartz/Next-js-Boilerplate)
 
 Things that were added:
 - layouts
@@ -41,20 +41,6 @@ Built-in feature from Next.js:
 - SEO-friendly
 - 🚀 Production-ready
 
-### Nextless.js SaaS Boilerplate
-
-Building your SaaS product faster with [Nextless JS SaaS Boilerplate](https://nextlessjs.com).
-
-[![Nextless React SaaS Boilerplate](https://nextlessjs.com/assets/images/hero-image.png)](https://nextlessjs.com)
-
-### Premium Themes
-
-| [Green Nextjs Landing Page Template](https://creativedesignsguru.com/landing-green-modern-nextjs-theme/) | [Purple Saas Nextjs Theme](https://creativedesignsguru.com/landing-purple-modern-react-theme/) |
-| --- | --- |
-| [![Green Nextjs Landing Page Template](https://creativedesignsguru.com/assets/images/themes/landing-green-modern-nextjs-theme-xs.png)](https://creativedesignsguru.com/landing-green-modern-nextjs-theme/) | [![Blue Landing Page Nextjs Theme](https://creativedesignsguru.com/assets/images/themes/landing-blue-modern-nextjs-theme-xs.png)](https://creativedesignsguru.com/landing-blue-modern-react-theme/) |
-
-Find more [Nextjs Themes](https://creativedesignsguru.com/category/nextjs/).
-
 ### Requirements
 
 - Node.js and npm
@@ -66,13 +52,13 @@ Run the following command on your local environment:
 ```
 git clone --depth=1 https://github.com/dvzrd/next-tailwind-starter.git my-project-name
 cd my-project-name
-npm install
+yarn
 ```
 
 Then, you can run locally in development mode with live reload:
 
 ```
-npm run dev
+yarn dev
 ```
 
 Open http://localhost:3000 with your favorite browser to see your project.
@@ -108,8 +94,8 @@ You can easily configure Next js Boilerplate. Please change the following file:
 You can see the results locally in production mode with:
 
 ```
-$ npm run build
-$ npm run start
+$ yarn build
+$ yarn start
 ```
 
 The generated HTML and CSS files are minified (built-in feature from Next js). It will also removed unused CSS from [Tailwind CSS](https://tailwindcss.com).
@@ -117,7 +103,7 @@ The generated HTML and CSS files are minified (built-in feature from Next js). I
 You can create an optimized production build with:
 
 ```
-npm run build-prod
+yarn build-prod
 ```
 
 Now, your blog is ready to be deployed. All generated files are located at `out` folder, which you can deploy with any hosting service.
