@@ -13,9 +13,6 @@ export interface FormProps extends BoxProps {
   isSubmitSuccessful?: boolean;
   method?: string;
   name?: string;
-  netlify?: 'true' | 'false';
-  netlifyHoneypot?: 'bot-field' | string;
-  netlifyRecaptcha?: 'true' | 'false';
   successMessage?: boolean | string;
   onSubmit?: SubmitHandler<any>;
 }

@@ -32,24 +32,13 @@ export const Form = ({
   errorMessage = 'Fill out all the required fields and try again.',
   hasErrors,
   isSubmitSuccessful,
-  method,
   name,
-  netlify = 'true',
-  netlifyHoneypot = 'bot-field',
   successMessage,
   onSubmit,
   ...rest
 }: FormProps) => {
   return (
-    <Box
-      as={as}
-      data-netlify={netlify}
-      data-netlify-honeypot={netlifyHoneypot}
-      name={name}
-      method={method}
-      onSubmit={onSubmit}
-      {...rest}
-    >
+    <Box as={as} name={name} onSubmit={onSubmit} {...rest}>
       {children}
       {button && (
         <GridBox
