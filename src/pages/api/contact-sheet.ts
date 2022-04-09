@@ -1,9 +1,10 @@
 import { google } from 'googleapis';
 
+// Reference: https://www.freecodecamp.org/news/create-a-feedback-form-using-nextjs-and-google-sheets-api/
+
 export const handler = async (req: any, res: any) => {
   if (req.method === 'POST') {
     const { name, email, phone, description } = req.body;
-    console.log(name, email, phone, description);
 
     const auth = new google.auth.GoogleAuth({
       credentials: {
@@ -37,9 +38,9 @@ export const handler = async (req: any, res: any) => {
       },
     });
 
-    res.status(201).json({ message: 'It works!', response });
+    res.status(201).json({ message: 'Form data posted', response });
   }
-  res.status(200).json({ message: 'Hey!' });
+  res.status(200).json({ message: 'Posting form data' });
 };
 
 export default handler;

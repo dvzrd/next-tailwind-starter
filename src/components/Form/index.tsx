@@ -3,7 +3,7 @@ import React from 'react';
 import clsx from 'clsx';
 
 import { Box } from '../Box';
-import { GridBox } from '../Box/Grid';
+import { FlexBox } from '../Box/Flex';
 import { Button } from '../Button';
 import { Text } from '../Text';
 import { FormField } from './Field';
@@ -41,13 +41,16 @@ export const Form = ({
     <Box as={as} name={name} onSubmit={onSubmit} {...rest}>
       {children}
       {button && (
-        <GridBox
+        <FlexBox
           {...actions}
           className={clsx(
-            'col-span-full flex items-center justify-between mt-4 order-last',
+            'col-span-full flex flex-col flex-nowrap items-start justify-start gap-2 mt-4 order-last',
             actions?.className
           )}
         >
+          <Button color="primary" type="submit" {...buttonProps}>
+            {button}
+          </Button>
           {isSubmitSuccessful
             ? successMessage && (
                 <Text className="text-service-pass">{successMessage}</Text>
@@ -56,10 +59,7 @@ export const Form = ({
               hasErrors && (
                 <Text className="text-service-fail">{errorMessage}</Text>
               )}
-          <Button color="primary" type="submit" {...buttonProps}>
-            {button}
-          </Button>
-        </GridBox>
+        </FlexBox>
       )}
     </Box>
   );
