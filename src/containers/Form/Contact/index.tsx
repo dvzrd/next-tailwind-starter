@@ -5,7 +5,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
 import { Box } from '../../../components/Box';
-import { encodeData, Form } from '../../../components/Form';
+import { Form } from '../../../components/Form';
 import { FormField } from '../../../components/Form/Field';
 import { Text } from '../../../components/Text';
 import styles from './ContactForm.module.scss';
@@ -18,7 +18,6 @@ export const ContactForm = ({ className, ...rest }: ContactFormProps) => {
     register,
     reset,
   } = useForm<ContactFormData>();
-  const [captured, setCaptured] = useState('');
   const [status, setStatus] = useState('');
   const recaptchaRef = useRef<ReCAPTCHA>(null);
 
@@ -29,39 +28,25 @@ export const ContactForm = ({ className, ...rest }: ContactFormProps) => {
     }, 5000);
   };
 
-  const onSubmit: SubmitHandler<ContactFormData> = async (
-    data: ContactFormData
-  ) => {
-    if (Object.keys(data).length > 0 && recaptchaRef.current) {
-      const captchaResponse = await recaptchaRef.current.executeAsync();
-      const options = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encodeData({
-          'form-name': 'contact',
-          'bot-field': captured,
-          'g-recaptcha-response': captchaResponse,
-          ...data,
-        }),
-      };
-
-      setStatus('sending');
-
-      fetch('/', options)
-        .then(() => {
-          setTimeout(() => {
-            reset();
-            handleSetStatus('sent');
-          }, 3000);
-        })
-        .catch((error) => {
-          handleSetStatus('failed');
-          console.error(error);
-        });
-    } else {
-      handleSetStatus('failed');
-      console.error(JSON.stringify(errors));
-    }
+  const onSubmit: SubmitHandler<ContactFormData> = (data: ContactFormData) => {
+    setStatus('sending');
+    fetch('/api/contact-sheet', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(() => {
+        setTimeout(() => {
+          reset();
+          handleSetStatus('sent');
+        }, 3000);
+      })
+      .catch((error) => {
+        handleSetStatus('failed');
+        console.error(error);
+      });
   };
 
   return (
@@ -76,13 +61,6 @@ export const ContactForm = ({ className, ...rest }: ContactFormProps) => {
         {...rest}
         className={clsx(styles.contactForm, className)}
       >
-        <input type="hidden" name="form-name" value="contact" />
-        <div hidden>
-          <input
-            name="bot-field"
-            onChange={(event) => setCaptured(event.target.value)}
-          />
-        </div>
         <Box className={styles.contactFormFields}>
           <FormField
             error={errors.name}

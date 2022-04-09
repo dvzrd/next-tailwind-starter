@@ -1,10 +1,11 @@
 import { SubmitHandler } from 'react-hook-form';
 
+import { FlexBoxProps } from '../Box/Flex/types';
 import { BoxProps } from '../Box/types';
 import { ButtonProps } from '../Button/types';
 
 export interface FormProps extends BoxProps {
-  actions?: BoxProps;
+  actions?: FlexBoxProps;
   button?: boolean | string;
   buttonProps?: ButtonProps;
   className?: string;
@@ -13,9 +14,6 @@ export interface FormProps extends BoxProps {
   isSubmitSuccessful?: boolean;
   method?: string;
   name?: string;
-  netlify?: 'true' | 'false';
-  netlifyHoneypot?: 'bot-field' | string;
-  netlifyRecaptcha?: 'true' | 'false';
   successMessage?: boolean | string;
   onSubmit?: SubmitHandler<any>;
 }

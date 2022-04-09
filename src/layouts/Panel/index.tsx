@@ -77,6 +77,7 @@ export const PanelLayout = ({
             <Header
               color="primary"
               mod="compact transparent"
+              showMenu={false}
               {...headerProps}
               className={clsx('relative', headerProps?.className)}
             >

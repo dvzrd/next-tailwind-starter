@@ -31,7 +31,7 @@ export const Box = <E extends HTMLElement = HTMLDivElement>({
   position,
   ...rest
 }: BoxProps<E>) => {
-  const Component = as;
+  const Component: any = as;
 
   return (
     <Component
